@@ -8,6 +8,7 @@ debug = DebugToolbarExtension(app)
 
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = True
 
+# test comment
 @app.route('/')
 def index():
     """Show homepage"""
