@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Try our surveys!{% endblock %}
+
+{% block content %}
+
+  <h2>Question {{question_num+1}} of {{survey_length}}:</h2>
+  <p>{{question}}</p>
+  <form action="/satisfaction_survey/answer/{{question_num}}"> 
+    {% for choice in choices %}
+    <input type="radio" id="{{ choice }}" name="{{question}}" value="{{ choice }}">
+    <label for="{{ choice }}">{{ choice }}</label><br>
+  {% endfor %}
+    
+    <input type="submit" value="submit" /></form>
+
+{% endblock %}

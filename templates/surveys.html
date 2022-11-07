@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Try our surveys!{% endblock %}
+
+{% block content %}
+
+  <h2>Satisfaction Survey</h2>
+  <p>Please take our survey!</p>
+  <form action="/start" method="POST"><input type="submit" value="Take the survey" /></form>
+
+{% endblock %}

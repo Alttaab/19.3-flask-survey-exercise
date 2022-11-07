@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Error{% endblock %}
+
+{% block content %}
+
+ 
+{% for msg in get_flashed_messages() %}
+  <p>{{ msg }}</p>
+{% endfor %}
+
+  <form action="/satisfaction_survey/questions/{{question_num}}"><input type="submit" value="return to survey" /></form>
+
+{% endblock %}
